@@ -1,0 +1,25 @@
+class Time {
+    int hr, min, sec;
+
+    Time() {
+        hr = 0;
+        min = 0;
+        sec = 0;
+    }
+    Time(int h, int m, int s) {
+        hr = h % 24;
+        min = m % 60;
+        sec = s % 60;
+    }
+    void display() {
+        System.out.println(hr + ":" + min + ":" + sec);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Time t1 = new Time(10, 30, 45);
+        Time t2 = new Time(25, 70, 80);
+        t1.display();
+        t2.display();
+    }
+}
